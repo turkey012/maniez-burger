@@ -1,11 +1,12 @@
 export const Button = ({ children, onClick, variant = "default", className = "" }) => {
-  const baseStyle = "px-4 py-2 rounded border";
-  const variants = {
-    default: "bg-red-600 text-white",
-    outline: "border-red-600 text-red-600 bg-white"
-  };
+  const baseStyles = "px-4 py-2 rounded font-bold transition ";
+  const variantStyles =
+    variant === "default"
+      ? "bg-red-600 text-white hover:bg-red-700"
+      : "border border-red-600 text-red-600 hover:bg-red-100";
+
   return (
-    <button onClick={onClick} className={`${baseStyle} ${variants[variant]} ${className}`}>
+    <button onClick={onClick} className={`${baseStyles} ${variantStyles} ${className}`}>
       {children}
     </button>
   );

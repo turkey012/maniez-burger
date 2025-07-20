@@ -1,5 +1,12 @@
 export const Card = ({ children, className = "" }) => (
-  <div className={`border rounded shadow p-2 bg-white ${className}`}>{children}</div>
+  <div className={`border border-gray-200 rounded shadow-sm bg-white ${className}`}>
+    {children}
+  </div>
 );
 
-export const CardContent = ({ children }) => <div>{children}</div>;
+export const CardContent = ({ children }) => (
+  <div className="p-4">
+    {children}
+  </div>
+);
+

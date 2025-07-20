@@ -1,11 +1,11 @@
-export const Card = ({ children, className = "" }) => {
+export const Card = ({ children, className }) => {
   return (
-    <div className={`border rounded-lg p-4 shadow-sm bg-white ${className}`}>
+    <div className={`bg-white shadow-md rounded-lg p-4 ${className || ""}`}>
       {children}
     </div>
   );
 };
 
-export const CardContent = ({ children, className = "" }) => {
-  return <div className={className}>{children}</div>;
+export const CardContent = ({ children }) => {
+  return <div className="mt-2">{children}</div>;
 };
